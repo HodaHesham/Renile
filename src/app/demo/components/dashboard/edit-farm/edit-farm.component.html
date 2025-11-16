@@ -1,0 +1,40 @@
+<p-dialog header="Edit farm" [(visible)]="showEdit" [modal]="true" [style]="{width: '50vw'}">
+    <form [formGroup]="editFarm" (ngSubmit)="onSubmit()">
+        <div class="p-fluid p-formgrid grid">
+            <div class="field col-12 md:col-6">
+                <label htmlFor="name">Name</label>
+                <input pInputText id="name" type="text" formControlName="name" />
+            </div>
+            <div class="field col-12 md:col-6">
+                <label htmlFor="type">Type</label>
+                <p-dropdown [options]="dropdownFarmtype"  optionLabel="type" formControlName="type"></p-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label htmlFor="code">Code</label>
+                <input pInputText id="code" type="text" formControlName="code" />
+            </div>
+            <div class="field col-12 md:col-6">
+                <label htmlFor="timezone">Timezone</label>
+                <input pInputText id="timezone" type="text" formControlName="timezone" />
+            </div>
+            <div class="field col-12">
+                <label htmlFor="address">Address</label>
+                <input pInputTextarea id="address" rows="8" formControlName="address" />
+            </div>
+            <div class="field col-12">
+                <label htmlFor="logo">Logo</label>
+                <input pInputText type="file" id="logo" formControlName="logo" accept="image/*" (change)="uploadReceiverImage($event)"/>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label htmlFor="contactPhone">Contact Phone</label>
+                <input pInputText id="contactPhone" type="text" formControlName="contactPhone" />
+            </div>
+        
+            <div class="field col-12 md:col-6">
+                <label htmlFor="contactEmail">Contact Email</label>
+                <input pInputText id="contactEmail" type="email" formControlName="contactEmail" />
+            </div>
+        </div>
+        <button type="submit" pButton label="Submit" [disabled]="!editFarm.valid"></button>
+    </form>
+</p-dialog>

@@ -1,0 +1,54 @@
+.farm {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        &-title {
+            color: #495057;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+    &-content {
+        max-height: 250px;
+        overflow-y: scroll;
+        padding-right: 10px;
+        &-list {
+            background-color: #f6f6f6;
+            border-radius: 5px;
+            padding: 24px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            display: flex;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &-title {
+                font-size: 16px;
+                color: #495057;
+                &.active {
+                    color: var(--primary-color);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}

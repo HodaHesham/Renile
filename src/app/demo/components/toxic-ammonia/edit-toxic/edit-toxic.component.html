@@ -1,0 +1,40 @@
+<p-dialog [(visible)]="showEditToxic" [style]="{width: '579px'}" header="ForeCast" [modal]="true" class="p-fluid">
+    <form [formGroup]="editToxicForm"  (ngSubmit)="onSubmit()">
+            <div class="grid">
+                <div class="col-6">
+                    <div class="field">
+                        <label for="Do">Do</label>
+                        <input type="text" pInputText id="Do"  required autofocus formControlName="do"/>
+                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="field">
+                        <label for="Ph">Ph</label>
+                        <input type="text" pInputText id="Ph"  required autofocus formControlName="ph"/>
+                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="field">
+                        <label for="tempreature">Tempreature</label>
+                        <input type="text" pInputText id="tempreature"  required autofocus formControlName="temp"/>
+                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="field">
+                        <label for="date">Date</label>
+                        <p-calendar [showIcon]="true" inputId="date" formControlName="date" ></p-calendar>
+                        <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
+                        <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex align-items-center justify-content-center cstuom-dialog-actions">
+                <button pButton pRipple label="test" type="submit" class="p-button-rounded"></button>
+                <button pButton pRipple label="Cancel" class=" p-button-rounded p-button-danger " (click)="hideDialog()"></button>
+            </div>
+    </form>
+</p-dialog>

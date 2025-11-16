@@ -1,0 +1,113 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "2024-02-14",
+            "ph": 7.2,
+            "dissolved_oxygen": 8.5,
+            "temperature": 18.5,
+            "ammonia": 0.15,
+            "weight": 2.3,
+            "results": "Optimal"
+        },
+        {
+            "date": "2024-02-15",
+            "ph": 6.8,
+            "dissolved_oxygen": 9.1,
+            "temperature": 16.2,
+            "ammonia": 0.12,
+            "weight": 2.4,
+            "results": "Good"
+        },
+        {
+            "date": "2024-02-16",
+            "ph": 7.5,
+            "dissolved_oxygen": 8.0,
+            "temperature": 20.8,
+            "ammonia": 0.22,
+            "weight": 2.2,
+            "results": "Average"
+        },
+        {
+            "date": "2024-02-17",
+            "ph": 7.1,
+            "dissolved_oxygen": 8.8,
+            "temperature": 19.3,
+            "ammonia": 0.18,
+            "weight": 2.5,
+            "results": "Good"
+        },
+        {
+            "date": "2024-02-18",
+            "ph": 6.9,
+            "dissolved_oxygen": 9.2,
+            "temperature": 21.1,
+            "ammonia": 0.14,
+            "weight": 2.6,
+            "results": "Optimal"
+        },
+        {
+            "date": "2024-02-19",
+            "ph": 7.3,
+            "dissolved_oxygen": 8.3,
+            "temperature": 22.5,
+            "ammonia": 0.25,
+            "weight": 2.1,
+            "results": "Poor"
+        },
+        {
+            "date": "2024-02-20",
+            "ph": 7.0,
+            "dissolved_oxygen": 8.9,
+            "temperature": 24.2,
+            "ammonia": 0.16,
+            "weight": 2.7,
+            "results": "Good"
+        },
+        {
+            "date": "2024-02-21",
+            "ph": 6.7,
+            "dissolved_oxygen": 9.0,
+            "temperature": 23.8,
+            "ammonia": 0.28,
+            "weight": 2.0,
+            "results": "Poor"
+        },
+        {
+            "date": "2024-02-22",
+            "ph": 7.4,
+            "dissolved_oxygen": 8.1,
+            "temperature": 22.1,
+            "ammonia": 0.13,
+            "weight": 2.8,
+            "results": "Optimal"
+        },
+        {
+            "date": "2024-02-23",
+            "ph": 7.2,
+            "dissolved_oxygen": 8.7,
+            "temperature": 20.7,
+            "ammonia": 0.19,
+            "weight": 2.5,
+            "results": "Good"
+        },
+        {
+            "date": "2024-02-24",
+            "ph": 6.8,
+            "dissolved_oxygen": 9.3,
+            "temperature": 18.9,
+            "ammonia": 0.11,
+            "weight": 2.9,
+            "results": "Optimal"
+        },
+        {
+            "date": "2024-02-25",
+            "ph": 7.1,
+            "dissolved_oxygen": 8.6,
+            "temperature": 17.6,
+            "ammonia": 0.17,
+            "weight": 2.6,
+            "results": "Good"
+        }
+    ]
+}

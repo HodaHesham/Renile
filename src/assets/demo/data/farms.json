@@ -1,0 +1,72 @@
+{
+    "results": [
+        {
+            "createdAt": "2024-01-15T10:00:00Z",
+            "updatedAt": "2024-02-10T14:30:00Z",
+            "id": "farm-001",
+            "name": "AquaTech Farm",
+            "type": "Intensive Fish Farming",
+            "code": "ATF001",
+            "logo": "aquatech-logo.jpg",
+            "address": "123 Marine Drive, Coastal City, CA 90210",
+            "nPonds": 12,
+            "nFishPerPond": 5000,
+            "timezone": "America/Los_Angeles",
+            "contactPhone": 5551234567,
+            "contactEmail": "info@aquatechfarm.com",
+            "order": "1",
+            "is_archived": false
+        },
+        {
+            "createdAt": "2024-02-01T09:15:00Z",
+            "updatedAt": "2024-02-12T11:45:00Z",
+            "id": "farm-002",
+            "name": "Blue Ocean Aquaculture",
+            "type": "Sustainable Fish Farming",
+            "code": "BOA002",
+            "logo": "blueocean-logo.jpg",
+            "address": "456 Fisherman's Wharf, Harbor Town, FL 33139",
+            "nPonds": 8,
+            "nFishPerPond": 3500,
+            "timezone": "America/New_York",
+            "contactPhone": 5559876543,
+            "contactEmail": "contact@blueoceanaqua.com",
+            "order": "2",
+            "is_archived": false
+        },
+        {
+            "createdAt": "2024-01-20T08:30:00Z",
+            "updatedAt": "2024-02-08T16:20:00Z",
+            "id": "farm-003",
+            "name": "Green Wave Fish Farm",
+            "type": "Organic Aquaculture",
+            "code": "GWF003",
+            "logo": "greenwave-logo.jpg",
+            "address": "789 Pond Street, Lake View, WA 98001",
+            "nPonds": 15,
+            "nFishPerPond": 4200,
+            "timezone": "America/Los_Angeles",
+            "contactPhone": 5555551234,
+            "contactEmail": "operations@greenwavefish.com",
+            "order": "3",
+            "is_archived": false
+        },
+        {
+            "createdAt": "2024-02-05T12:00:00Z",
+            "updatedAt": "2024-02-14T10:30:00Z",
+            "id": "farm-004",
+            "name": "Atlantic Seafood Solutions",
+            "type": "Commercial Fish Farming",
+            "code": "ASS004",
+            "logo": "atlantic-logo.jpg",
+            "address": "321 Ocean Blvd, Seaside, ME 04401",
+            "nPonds": 20,
+            "nFishPerPond": 6000,
+            "timezone": "America/New_York",
+            "contactPhone": 5557891234,
+            "contactEmail": "admin@atlanticseafood.com",
+            "order": "4",
+            "is_archived": false
+        }
+    ]
+}

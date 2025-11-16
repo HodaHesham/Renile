@@ -1,0 +1,240 @@
+/* ====================================== */
+/*       PROJECT-ALIGNED DIALOG STYLES   */
+/* ====================================== */
+
+/* Main Dialog Container - Professional Clean Design */
+.p-dialog {
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(73, 80, 87, 0.15), 
+                0 4px 12px rgba(73, 80, 87, 0.08) !important;
+    border: 1px solid rgba(73, 80, 87, 0.1) !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+    animation: dialogSlideIn 0.3s ease-out !important;
+    width: 600px !important;
+    max-width: 90vw !important;
+}
+
+/* Dialog Animation - Subtle and Professional */
+@keyframes dialogSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Dialog Header - Clean Professional Style */
+.p-dialog .p-dialog-header {
+    background: #f8f9fa !important;
+    color: #495057 !important;
+    padding: 1.5rem 2rem !important;
+    border-bottom: 2px solid var(--primary-color) !important;
+    border-radius: 12px 12px 0 0 !important;
+    position: relative !important;
+}
+
+/* Dialog Header Accent Line */
+.p-dialog .p-dialog-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-color) !important;
+}
+
+/* Dialog Title - Professional Typography */
+.p-dialog .p-dialog-header .p-dialog-title {
+    color: #495057 !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+    margin: 0 !important;
+}
+
+/* Close Icon - Danger Color with Rounded Background */
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    background: rgba(220, 53, 69, 0.1) !important;
+    color: #dc3545 !important;
+    border-radius: 50% !important;
+    width: 35px !important;
+    height: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+    border: 1px solid rgba(220, 53, 69, 0.3) !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover {
+    background: #dc3545 !important;
+    color: white !important;
+    border-color: #dc3545 !important;
+    transform: scale(1.1) !important;
+}
+
+/* Dialog Content - Clean and Spacious */
+.p-dialog .p-dialog-content {
+    padding: 2rem !important;
+    background: #ffffff !important;
+    color: #495057 !important;
+}
+
+/* Form Styling Within Dialogs */
+.p-dialog .p-fluid .field {
+    margin-bottom: 1.5rem !important;
+}
+
+.p-dialog .field > label {
+    color: #495057 !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    display: block !important;
+    font-size: 0.9rem !important;
+}
+
+/* Enhanced Input Styles - Matching Project Theme */
+.p-dialog .p-inputtext {
+    height: 2.8rem !important;
+    border-radius: 8px !important;
+    padding: 0 1rem !important;
+    transition: all 0.2s ease !important;
+    background: #ffffff !important;
+    color: #495057 !important;
+    font-size: 0.95rem !important;
+}
+
+.p-dialog .p-inputtext:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1) !important;
+    outline: none !important;
+}
+
+/* Simple Select Box Styles - Clean and Minimal */
+.p-dialog .p-dropdown {
+    height: 3rem !important;
+    border-radius: 6px !important;
+    border: 1px solid #ced4da !important;
+    transition: border-color 0.2s ease !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.p-dialog .p-dropdown:hover {
+    border-color: #adb5bd !important;
+}
+
+.p-dialog .p-dropdown:focus,
+.p-dialog .p-dropdown.p-focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 1px rgba(var(--primary-color-rgb), 0.2) !important;
+    outline: none !important;
+}
+
+.p-dialog .p-dropdown .p-dropdown-label {
+    padding: 0.75rem 1rem !important;
+    color: #495057 !important;
+    font-size: 0.95rem !important;
+}
+
+.p-dialog .p-dropdown .p-dropdown-trigger {
+    color: #6c757d !important;
+    width: 2.5rem !important;
+}
+
+.p-dialog .p-dropdown-panel {
+    border-radius: 6px !important;
+    border: 1px solid #ced4da !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom Dialog Actions - Professional Button Layout */
+.cstuom-dialog-actions {
+    background: #f8f9fa !important;
+    padding: 1.5rem 2rem !important;
+    border-radius: 0 0 12px 12px !important;
+    border-top: 1px solid #e9ecef !important;
+    margin: 1.5rem -2rem -2rem -2rem !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+}
+
+.cstuom-dialog-actions button {
+    min-width: 6rem !important;
+    height: 2.5rem !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s ease !important;
+    border: 2px solid transparent !important;
+}
+
+/* Success/Primary Button */
+.cstuom-dialog-actions .p-button-success,
+.cstuom-dialog-actions .p-button:not(.p-button-outlined):not(.p-button-text) {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.cstuom-dialog-actions .p-button-success:hover {
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.3) !important;
+}
+
+/* Cancel/Secondary Button */
+.cstuom-dialog-actions .p-button-outlined {
+    background: transparent !important;
+    color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+.cstuom-dialog-actions .p-button-outlined:hover {
+    background: #6c757d !important;
+    color: white !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Modal Overlay - Subtle */
+.p-dialog-mask {
+    background: rgba(73, 80, 87, 0.4) !important;
+    backdrop-filter: blur(2px) !important;
+    animation: fadeIn 0.2s ease-out !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .p-dialog {
+        margin: 1rem !important;
+        border-radius: 10px !important;
+    }
+    
+    .p-dialog .p-dialog-header {
+        padding: 1rem 1.5rem !important;
+    }
+    
+    .p-dialog .p-dialog-content {
+        padding: 1.5rem !important;
+    }
+    
+    .cstuom-dialog-actions {
+        padding: 1rem 1.5rem !important;
+        flex-direction: column !important;
+    }
+    
+    .cstuom-dialog-actions button {
+        width: 100% !important;
+    }
+}

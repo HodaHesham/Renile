@@ -1,0 +1,88 @@
+{
+    "results": [
+        {
+            "createdAt": "2024-02-01T08:00:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-001",
+            "name": "Pond Alpha-1",
+            "numberOfFish": 4850,
+            "typeOfFish": "Atlantic Salmon",
+            "averageWeight": 2.3,
+            "temperature": 18.5,
+            "foodAmount": 125.5,
+            "foodSinceStartOfDay": 45.2,
+            "foodSinceStartOfPond": 2850.7,
+            "waterQuality": "Excellent"
+        },
+        {
+            "createdAt": "2024-02-01T08:00:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-002",
+            "name": "Pond Beta-2",
+            "numberOfFish": 3920,
+            "typeOfFish": "Rainbow Trout",
+            "averageWeight": 1.8,
+            "temperature": 16.2,
+            "foodAmount": 98.3,
+            "foodSinceStartOfDay": 32.1,
+            "foodSinceStartOfPond": 2245.6,
+            "waterQuality": "Good"
+        },
+        {
+            "createdAt": "2024-02-02T09:15:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-003",
+            "name": "Pond Gamma-3",
+            "numberOfFish": 5200,
+            "typeOfFish": "Sea Bass",
+            "averageWeight": 3.1,
+            "temperature": 20.8,
+            "foodAmount": 156.8,
+            "foodSinceStartOfDay": 52.3,
+            "foodSinceStartOfPond": 3125.9,
+            "waterQuality": "Excellent"
+        },
+        {
+            "createdAt": "2024-02-02T09:15:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-004",
+            "name": "Pond Delta-4",
+            "numberOfFish": 4100,
+            "typeOfFish": "Tilapia",
+            "averageWeight": 1.6,
+            "temperature": 24.3,
+            "foodAmount": 89.4,
+            "foodSinceStartOfDay": 28.7,
+            "foodSinceStartOfPond": 1987.3,
+            "waterQuality": "Good"
+        },
+        {
+            "createdAt": "2024-02-03T10:30:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-005",
+            "name": "Pond Epsilon-5",
+            "numberOfFish": 4650,
+            "typeOfFish": "Cod",
+            "averageWeight": 2.7,
+            "temperature": 15.1,
+            "foodAmount": 142.3,
+            "foodSinceStartOfDay": 41.8,
+            "foodSinceStartOfPond": 2756.2,
+            "waterQuality": "Excellent"
+        },
+        {
+            "createdAt": "2024-02-03T10:30:00Z",
+            "updatedAt": "2024-02-14T14:30:00Z",
+            "id": "pond-006",
+            "name": "Pond Zeta-6",
+            "numberOfFish": 3750,
+            "typeOfFish": "Catfish",
+            "averageWeight": 2.1,
+            "temperature": 22.4,
+            "foodAmount": 105.6,
+            "foodSinceStartOfDay": 35.9,
+            "foodSinceStartOfPond": 2134.8,
+            "waterQuality": "Fair"
+        }
+    ]
+}
