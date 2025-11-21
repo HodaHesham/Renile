@@ -17,23 +17,25 @@
         <div class="p-fluid p-formgrid grid">
             <div class="field col-12 md:col-6">
                 <label htmlFor="name">Name</label>
-                <input pInputText id="name" type="text" formControlName="name" />
+                <input pInputText id="name" type="text" placeholder=" Farm Name" formControlName="name" />
             </div>
             <div class="field col-12 md:col-6">
                 <label htmlFor="type">Type</label>
-                <p-dropdown [options]="dropdownFarmtype" optionLabel="type" formControlName="type"></p-dropdown>
+                <div class="unique-type">
+                <p-dropdown [options]="dropdownFarmtype"  optionLabel="type" formControlName="type"></p-dropdown>
+              </div>
             </div>
             <div class="field col-12 md:col-6">
                 <label htmlFor="code">Code</label>
-                <input pInputText id="code" type="text" formControlName="code" />
+                <input pInputText id="code" placeholder=" Farm Code" type="text" formControlName="code" />
             </div>
             <div class="field col-12 md:col-6">
                 <label htmlFor="timezone">Timezone</label>
-                <input pInputText id="timezone" type="text" formControlName="timezone" />
+                <input pInputText id="timezone" type="text" placeholder=" Farm Timezone" formControlName="timezone" />
             </div>
             <div class="field col-12">
                 <label htmlFor="address">Address</label>
-                <input pInputTextarea id="address" rows="8" formControlName="address" />
+                <input pInputTextarea id="address" rows="8" placeholder=" Farm Address" formControlName="address" />
             </div>
             <div class="field col-12">
                 <label htmlFor="logo">Logo</label>
@@ -41,13 +43,13 @@
                     (change)="uploadReceiverImage($event)" />
             </div>
             <div class="field col-12 md:col-6">
-                <label htmlFor="contactPhone">Contact Phone</label>
-                <input pInputText id="contactPhone" type="text" formControlName="contactPhone" />
+                <label htmlFor="contactPhone">Contact Number</label>
+                <input pInputText id="contactPhone" type="number" placeholder="Contact Number" formControlName="contactPhone" />
             </div>
 
             <div class="field col-12 md:col-6">
                 <label htmlFor="contactEmail">Contact Email</label>
-                <input pInputText id="contactEmail" type="email" formControlName="contactEmail" />
+                <input pInputText id="contactEmail" type="email" placeholder="Contact Email"  formControlName="contactEmail" />
             </div>
         </div>
         <button type="submit" pButton label="Submit" [disabled]="!farmForm.valid"></button>

@@ -5,7 +5,7 @@
         justify-content: space-between;
         margin-bottom: 20px;
         &-title {
-            color: #495057;
+            color: #333333;
             font-size: 16px;
             margin-bottom: 0;
         }
@@ -26,7 +26,7 @@
             }
             &-title {
                 font-size: 16px;
-                color: #495057;
+                color: #333333;
                 &.active {
                     color: var(--primary-color);
                     font-weight: bold;

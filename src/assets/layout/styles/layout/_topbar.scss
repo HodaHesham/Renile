@@ -18,7 +18,7 @@
         color: var(--surface-900);
         font-size: 1.5rem;
         font-weight: 500;
-        width: 300px;
+        width: 250px;
         border-radius: 12px;
 
         img {
@@ -45,11 +45,16 @@
 
         &:hover {
             color: var(--text-color);
-            background-color: var(--surface-hover);
+            //background-color: var(--surface-hover);
+            cursor: pointer!important;
+            background-color: transparent!important;
         }
 
         &:focus {
             @include focused();
+            background-color: transparent!important;
+            border-color:transparent!important ;
+            box-shadow: none!important
         }
 
         i {
@@ -89,7 +94,7 @@
     }
 
     .layout-menu-button {
-        margin-left: 2rem;
+        //margin-left: 2rem;
     }
 
     .layout-topbar-menu-button {
@@ -105,6 +110,7 @@
         padding: 0;
         list-style: none;
         display: flex;
+        align-items: center;
 
         .layout-topbar-button {
             margin-left: 1rem;

@@ -12,13 +12,26 @@
     border-radius: $borderRadius;
     padding: 0.5rem 1.5rem;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, .02), 0px 0px 2px rgba(0, 0, 0, .05), 0px 1px 4px rgba(0, 0, 0, .08);
+   
 }
 
 .layout-menu {
     margin: 0;
     padding: 0;
     list-style-type: none;
-
+   
+.layout-menu ul a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    outline: 0 none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+   
+}
     .layout-root-menuitem {
         >.layout-menuitem-root-text {
             font-size: .857rem;
@@ -83,11 +96,12 @@
             }
 
             &:hover {
-                background-color: var(--surface-hover);
+                background-color: transparent!important;
             }
 
             &:focus {
                 @include focused-inset();
+                box-shadow: none!important;
             }
         }
 

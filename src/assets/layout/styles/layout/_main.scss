@@ -16,6 +16,36 @@ body {
     min-height: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    .mb-4.p-toolbar.p-component {
+    background-color: var(--surface-overlay);
+    border-radius: 12px;
+    margin-bottom: 0px!important;
+ }
+ 
+ ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* track color */
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* scrollbar color */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #689f38 #f0f0f0;
+}
+
 }
 
 a {

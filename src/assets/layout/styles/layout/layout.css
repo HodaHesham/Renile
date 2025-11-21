@@ -257,6 +257,7 @@ a {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  
 }
 .layout-menu ul a {
   display: flex;
@@ -280,6 +281,9 @@ a {
 .layout-menu ul a.active-route {
   font-weight: 700;
   color: var(--primary-color);
+  display: flex;
+    align-items: end;
+
 }
 .layout-menu ul a:hover {
   background-color: var(--surface-hover);
