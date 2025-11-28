@@ -21,10 +21,26 @@ body {
     border-radius: 12px;
     margin-bottom: 0px!important;
  }
- 
+ .grid{
+  margin-top: 0rem!important;
+ }
+ .custom-search{
+  width: 370px!important;
+  
+  .p-inputtext.p-component{
+     width: 370px!important;
+  }
+ }
+ .col-12 {
+  padding: 0px!important;
+  margin-bottom: 16px!important;
+ }
+ .p-inputtext.ng-dirty.ng-invalid{
+  border: solid 2px #dc3545!important;
+ }
  ::-webkit-scrollbar {
   width: 8px;
-}
+}g
 
 ::-webkit-scrollbar-track {
   background: #f0f0f0; /* track color */

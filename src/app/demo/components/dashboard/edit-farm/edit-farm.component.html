@@ -1,40 +1,45 @@
 <p-dialog header="Edit farm" [(visible)]="showEdit" [modal]="true" [style]="{width: '50vw'}">
     <form [formGroup]="editFarm" (ngSubmit)="onSubmit()">
-        <div class="p-fluid p-formgrid grid">
-            <div class="field col-12 md:col-6">
+        <div class="main-con" style="width:500px; margin:24px auto 0px auto;">
+        <div class="p-fluid col-12 p-formgrid grid">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="name">Name</label>
-                <input pInputText id="name" type="text" formControlName="name" />
+                <input pInputText id="name" type="text" style="width:220px; margin: auto;" formControlName="name" />
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="type">Type</label>
+                <div class="unique-type" style="width:220px; margin: auto;" >
                 <p-dropdown [options]="dropdownFarmtype"  optionLabel="type" formControlName="type"></p-dropdown>
+                </div>
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="code">Code</label>
-                <input pInputText id="code" type="text" formControlName="code" />
+                <input pInputText id="code" type="text" style="width:220px; margin: auto auto auto 3px;" formControlName="code" />
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="timezone">Timezone</label>
-                <input pInputText id="timezone" type="text" formControlName="timezone" />
+                <input pInputText id="timezone" type="text" style="width:220px; margin: auto auto auto 8px;" formControlName="timezone" />
             </div>
-            <div class="field col-12">
+            <div class="field col-12" style="margin-bottom: 16px;">
                 <label htmlFor="address">Address</label>
-                <input pInputTextarea id="address" rows="8" formControlName="address" />
+                <input pInputTextarea id="address" style="width:455px; margin: auto;" rows="8" formControlName="address" />
             </div>
-            <div class="field col-12">
+            <div class="field col-12" style="margin-bottom: 16px;">
                 <label htmlFor="logo">Logo</label>
-                <input pInputText type="file" id="logo" formControlName="logo" accept="image/*" (change)="uploadReceiverImage($event)"/>
+                <input pInputText type="file" id="logo" formControlName="logo" style="width:455px; margin: auto;" class="custom-upload" accept="image/*" (change)="uploadReceiverImage($event)"/>
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="contactPhone">Contact Phone</label>
-                <input pInputText id="contactPhone" type="text" formControlName="contactPhone" />
+                <input pInputText id="contactPhone" type="text" style="width:220px; margin: auto;" formControlName="contactPhone" />
             </div>
         
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="contactEmail">Contact Email</label>
-                <input pInputText id="contactEmail" type="email" formControlName="contactEmail" />
+                <input pInputText id="contactEmail" type="email" style="width:220px; margin: auto auto auto 8px;"  formControlName="contactEmail" />
             </div>
+            <div class="sep-line"></div>
+            <button type="submit" class="unique-sub" pButton label="Submit" [disabled]="!editFarm.valid"></button>
         </div>
-        <button type="submit" pButton label="Submit" [disabled]="!editFarm.valid"></button>
+        </div>
     </form>
 </p-dialog>

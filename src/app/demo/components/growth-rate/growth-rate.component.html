@@ -12,45 +12,51 @@
 			</ng-template>
 		</p-toolbar>
 	</div>
-	<p-dialog [(visible)]="growthDialog" [style]="{width: '579px'}" header="ForeCast" [modal]="true" class="p-fluid">
+	<p-dialog [(visible)]="growthDialog" [style]="{width: '579px'}"  header="ForeCast" [modal]="true" class="p-fluid">
         <ng-template pTemplate="content">
-            <div class="grid">
-                <div class="col-6">
-                    <div class="field">
+            <div class="main-con" style="width:500px; margin:24px auto 0px auto;">
+            <div class="p-fluid col-12 p-formgrid grid">
+                <div >
+                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                         <label for="Do">Do</label>
-                        <input type="text" pInputText id="Do"  required autofocus/>
+                        <input type="text" pInputText id="Do" style="width:220px; margin: auto;"  required autofocus/>
                         <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="field">
+                <div >
+                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                         <label for="Ph">Ph</label>
-                        <input type="text" pInputText id="Ph"  required autofocus/>
+                        <input type="text" pInputText id="Ph" style="width:220px; margin: auto auto auto 8px;"  required autofocus/>
                         <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="field">
+                <div >
+                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                         <label for="tempreature">Tempreature</label>
-                        <input type="text" pInputText id="tempreature"  required autofocus/>
+                        <input type="text" pInputText id="tempreature" style="width:220px; margin: auto;"  required autofocus/>
                         <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="field">
+                <div >
+                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                         <label for="date">Date</label>
+                        <div class="unique-type" style="width:220px; margin: auto auto auto 8px;">
                         <p-calendar [showIcon]="true" inputId="date"></p-calendar>
                         <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
-                        <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                            <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+                            </div>
                     </div>
                 </div>
+            </div>
             </div>
         </ng-template>
 
         <ng-template pTemplate="footer">
-            <div class="flex align-items-center justify-content-center cstuom-dialog-actions">
-                <button pButton pRipple label="test" class="p-button-rounded" (click)="saveCast()"></button>
-                <button pButton pRipple label="Cancel" class=" p-button-rounded p-button-danger " (click)="hideDialog()"></button>
+            <div class="sep-line"></div>
+              <div class="flex align-items-center justify-content-center" style="margin: auto;">
+                <button pButton pRipple label="test" type="submit" class="p-button-doubled"></button>
+                <button pButton pRipple label="Cancel" class=" p-button-rounded p-button-danger-doubled "
+                    (click)="hideDialog()"></button>
             </div>
         </ng-template>
     </p-dialog>

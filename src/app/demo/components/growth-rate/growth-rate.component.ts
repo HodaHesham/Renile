@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription, debounceTime } from 'rxjs';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { GrowthService } from '../../service/growth.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
     selector: 'app-growth-rate',
@@ -15,6 +16,7 @@ export class GrowthRateComponent implements OnInit, OnDestroy {
     chartData: any;
     chartOptions: any;
     subscription: Subscription;
+    dateRangeForm: FormGroup;
     chartInfo: any;
 
     constructor(private layoutService: LayoutService, private GrowthService: GrowthService) {

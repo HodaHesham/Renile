@@ -1227,6 +1227,7 @@
   }
   .p-inputtext.ng-dirty.ng-invalid {
     border-color: #ef9a9a;
+    
   }
   .p-inputtext.p-inputtext-sm {
     font-size: 0.875rem;

@@ -11,7 +11,7 @@
     background: #ffffff !important;
     overflow: hidden !important;
     animation: dialogSlideIn 0.3s ease-out !important;
-    width: 600px !important;
+    width: 579px !important;
     max-width: 90vw !important;
 }
 
@@ -25,6 +25,12 @@
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+.p-fluid.col-12.p-formgrid.grid {
+    width: 455px!important;
+    margin-top: 0px!important;
+    margin-right: auto!important;
+    margin-left: auto!important;
 }
 
 /* Dialog Header - Clean Professional Style */
@@ -88,23 +94,35 @@
 
 /* Dialog Content - Clean and Spacious */
 .p-dialog .p-dialog-content {
-    padding: 2rem !important;
+    //padding: 2rem !important;
+    border-top: solid 2px var(--surface-border);
     background: #ffffff !important;
     color: #333333 !important;
+    //width: 470px!important;
+    margin: auto;
 }
 
 /* Form Styling Within Dialogs */
 .p-dialog .p-fluid .field {
-   margin-bottom: 0rem !important;
+   //margin-bottom: 0rem !important;
 }
 
 .p-dialog .field > label {
     color: #333333 !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     margin-bottom: 0.5rem !important;
     display: block !important;
     font-size: 1rem !important;
     margin-left: 8px!important;
+}
+.unique-sub{
+    height:46px; 
+    width: 316px;
+    margin:16px auto 0px auto;
+    border-radius: 8px !important;
+    &:hover{
+        background-color: var(--primary-color);
+    }
 }
 
 /* Enhanced Input Styles - Matching Project Theme */
@@ -112,11 +130,14 @@
     height: 3.2rem !important;
     border-radius: 8px !important;
     padding: 0 1rem !important;
-    font-weight: 500!important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400!important;
     transition: all 0.2s ease !important;
     background: #f2f2f2 !important;
     color: #333333 !important;
-    font-size: 0.95rem !important;
+    font-size: 1.1rem !important;
     &:focus {
     border-color: var(--primary-color) !important;
     box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1) !important;
@@ -125,10 +146,28 @@
 }
 }
 .p-dialog .p-inputtex::placeholder{
-    color: #333333 !important;
+    color: #4b4a4a !important;
     font-size: 0.75rem !important;
     font-weight: 400!important;
 }
+input#logo{
+       height: 3.2rem !important;
+    border-radius: 8px !important;
+    padding: 0 1rem !important;
+    font-weight: 500!important;
+    padding-top: 10px!important;
+    transition: all 0.2s ease !important;
+    background: #f2f2f2 !important;
+    color: #333333 !important;
+    font-size: 1.1rem !important;
+    &:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1) !important;
+    outline: none !important;
+    
+} 
+}
+
 .unique-type {
     background: #f2f2f2 !important;
     height: 3.4rem !important;
@@ -142,15 +181,78 @@
     box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1) !important;
     outline: none !important;
 }
+button.p-element.p-ripple.p-datepicker-trigger.p-button-icon-only{
+    background: transparent;
+    border: none !important;
 }
+.p-calendar.p-calendar-w-btn.p-calendar-disabled{
+  .p-element.p-icon-wrapper{
+color: var(--primary-color);
 
+}
+}
+.p-element.p-icon-wrapper{
+color: var(--text-color-secondary);
+
+}
+.p-calendar.p-calendar-w-btn{
+    height: 44px!important;
+    input#date {
+    border: none !important;
+}
+}
+}
+.sep-line{
+    height: 2px;
+    background-color: #ced4da;
+    //margin-top: 16px;
+    width: 552px;
+}
+button.p-element.p-button-rounded.p-button-danger-doubled.p-button.p-component{
+     display: flex;
+    width: 150px;
+    height: 47px;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: center;
+    color: #dc3545 !important;
+    background: #ffffff;
+    border: 2px solid #dc3545 !important;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+     &:hover{
+        background-color: #ffffff !important;
+    }
+
+}
+button.p-element.p-button-doubled.p-button.p-component {
+    display: flex;
+    width: 150px;
+     margin-top: 16px;
+    height: 47px;
+    align-items: center;
+    margin-right: 16px;
+    justify-content: center;
+    color: #ffffff;
+    background: var(--primary-color);
+    border: 2px solid #245444;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 3px;
+    &:hover{
+        background-color: var(--primary-color);
+    }
+}
 /* Simple Select Box Styles - Clean and Minimal */
 .p-dialog .p-dropdown {
     height: 3rem !important;
     border-radius: 6px !important;
     border: 1px solid transparent !important;
     transition: border-color 0.2s ease !important;
-    background: #ffffff !important;
+    background: #f2f2f2 !important;
     box-shadow: none !important;
 }
 
@@ -168,7 +270,7 @@ border-color: transparent !important;
 .p-dialog .p-dropdown .p-dropdown-label {
     padding: 0.75rem 1rem !important;
     color: #333333 !important;
-    font-size: 0.95rem !important;
+    font-size: 1.1rem !important;
 }
 
 .p-dialog .p-dropdown .p-dropdown-trigger {
@@ -257,7 +359,7 @@ border-color: transparent !important;
     }
     
     .p-dialog .p-dialog-content {
-        padding: 1.5rem !important;
+        //padding: 1.5rem !important;
     }
     
     .cstuom-dialog-actions {

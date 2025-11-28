@@ -12,47 +12,55 @@
         </ng-container>
     </div>
 </div>
-<p-dialog header="Add farm" [(visible)]="visible" [modal]="true" [style]="{width: '50vw'}">
+<p-dialog header="Add farm" [(visible)]="visible" [modal]="true"  [style]="{width: '50vw'}">
     <form [formGroup]="farmForm" (ngSubmit)="onSubmit()">
-        <div class="p-fluid p-formgrid grid">
-            <div class="field col-12 md:col-6">
+        <div class="main-con" style="width:500px; margin:24px auto 0px auto;">
+        <div class="p-fluid col-12 p-formgrid grid">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="name">Name</label>
-                <input pInputText id="name" type="text" placeholder=" Farm Name" formControlName="name" />
+                <input pInputText id="name" type="text" style="width:220px; margin: auto;" placeholder=" Farm Name" formControlName="name" />
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="type">Type</label>
-                <div class="unique-type">
+                <div class="unique-type" style="width:220px; margin: auto;">
                 <p-dropdown [options]="dropdownFarmtype"  optionLabel="type" formControlName="type"></p-dropdown>
               </div>
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="code">Code</label>
-                <input pInputText id="code" placeholder=" Farm Code" type="text" formControlName="code" />
+                <input pInputText id="code" style="width:220px; margin: auto auto auto 3px;" placeholder=" Farm Code" type="text" formControlName="code" />
             </div>
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="timezone">Timezone</label>
-                <input pInputText id="timezone" type="text" placeholder=" Farm Timezone" formControlName="timezone" />
+                <input pInputText id="timezone" style="width:220px; margin: auto auto auto 8px;" type="text" placeholder=" Farm Timezone" formControlName="timezone" />
             </div>
-            <div class="field col-12">
+            <div class="field col-12" style="margin-bottom: 16px;">
                 <label htmlFor="address">Address</label>
-                <input pInputTextarea id="address" rows="8" placeholder=" Farm Address" formControlName="address" />
+                <input pInputTextarea id="address" style="width:455px; margin: auto;" rows="8" placeholder=" Farm Address" formControlName="address" />
             </div>
-            <div class="field col-12">
+            <div class="field col-12"style="margin-bottom: 16px;">
                 <label htmlFor="logo">Logo</label>
-                <input pInputText type="file" id="logo" formControlName="logo" accept="image/*"
+                <div class="upload-con">
+                <input pInputText type="file" style="width:455px; margin: auto;" id="logo" formControlName="logo" class="custom-upload"  accept="image/*"
                     (change)="uploadReceiverImage($event)" />
+                    
+                    </div>
             </div>
-            <div class="field col-12 md:col-6">
+            
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="contactPhone">Contact Number</label>
-                <input pInputText id="contactPhone" type="number" placeholder="Contact Number" formControlName="contactPhone" />
+                <input pInputText id="contactPhone" style="width:220px; margin: auto;" type="number" placeholder="Contact Number" formControlName="contactPhone" />
             </div>
 
-            <div class="field col-12 md:col-6">
+            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
                 <label htmlFor="contactEmail">Contact Email</label>
-                <input pInputText id="contactEmail" type="email" placeholder="Contact Email"  formControlName="contactEmail" />
+                <input pInputText id="contactEmail" type="email" style="width:220px; margin: auto auto auto 8px;" placeholder="Contact Email"  formControlName="contactEmail" />
             </div>
+            <div class="sep-line"></div>
+            <button type="submit" class="unique-sub"  pButton label="Submit" [disabled]="!farmForm.valid"></button>
         </div>
-        <button type="submit" pButton label="Submit" [disabled]="!farmForm.valid"></button>
+        </div>
+        
     </form>
 </p-dialog>
 <p-toast></p-toast>
