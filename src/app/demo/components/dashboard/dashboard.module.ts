@@ -26,31 +26,30 @@ import { DividerModule } from 'primeng/divider';
 import { EditFarmComponent } from './edit-farm/edit-farm.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        DashboardsRoutingModule,
-        FormsModule,
-        ChartModule,
-        MenuModule,
-        TableModule,
-        DividerModule,
-        ToolbarModule,
-        StyleClassModule,
-        ToastModule,
-        PanelMenuModule,
-        ButtonModule,
-        CrudModule,
-        InputTextModule,
-        InputTextareaModule,
-        DropdownModule,
-        ReactiveFormsModule,
-        RadioButtonModule,
-        InputNumberModule,
-        CalendarModule,
-        DialogModule,
-
-    ],
-    declarations: [DashboardComponent ,AddFarmComponent,FarmDetailsComponent,EditFarmComponent],
-    providers: [MessageService]
+  imports: [
+    CommonModule,
+    DashboardsRoutingModule,
+    FormsModule,
+    ChartModule,
+    MenuModule,
+    TableModule,
+    DividerModule,
+    ToolbarModule,
+    StyleClassModule,
+    ToastModule,
+    PanelMenuModule,
+    ButtonModule,
+    CrudModule,
+    InputTextModule,
+    InputTextareaModule,
+    DropdownModule,
+    ReactiveFormsModule,
+    RadioButtonModule,
+    InputNumberModule,
+    CalendarModule,
+    DialogModule,
+  ],
+  declarations: [DashboardComponent, AddFarmComponent, FarmDetailsComponent, EditFarmComponent],
+  providers: [MessageService],
 })
-export class DashboardModule { }
+export class DashboardModule {}

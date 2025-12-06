@@ -1,66 +1,132 @@
 <div class="card">
-    <div class="farm-header">
-        <h5 class="farm-header-title">My Farms</h5>
-        <button pButton pRipple (click)="showDialog()" type="button" icon="pi pi-plus"
-            class="p-button-rounded p-button-success"></button>
-    </div>
-    <div class="farm-content">
-        <ng-container *ngFor="let item of farm">
-            <a class="farm-content-list" (click)="sendItem(item)">
-                <span class="farm-content-list-title" [ngClass]="{'active':isActive(item)}">{{item.name}}</span>
-            </a>
-        </ng-container>
-    </div>
+  <div class="farm-header">
+    <h5 class="farm-header-title">My Farms</h5>
+    <button
+      pButton
+      pRipple
+      (click)="showDialog()"
+      type="button"
+      icon="pi pi-plus"
+      class="p-button-rounded p-button-success"
+    ></button>
+  </div>
+  <div class="farm-content">
+    <ng-container *ngFor="let item of farm">
+      <a class="farm-content-list" (click)="sendItem(item)">
+        <span class="farm-content-list-title" [ngClass]="{ active: isActive(item) }">{{
+          item.name
+        }}</span>
+      </a>
+    </ng-container>
+  </div>
 </div>
-<p-dialog header="Add farm" [(visible)]="visible" [modal]="true"  [style]="{width: '50vw'}">
-    <form [formGroup]="farmForm" (ngSubmit)="onSubmit()">
-        <div class="main-con" style="width:500px; margin:24px auto 0px auto;">
-        <div class="p-fluid col-12 p-formgrid grid">
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="name">Name</label>
-                <input pInputText id="name" type="text" style="width:220px; margin: auto;" placeholder=" Farm Name" formControlName="name" />
-            </div>
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="type">Type</label>
-                <div class="unique-type" style="width:220px; margin: auto;">
-                <p-dropdown [options]="dropdownFarmtype"  optionLabel="type" formControlName="type"></p-dropdown>
-              </div>
-            </div>
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="code">Code</label>
-                <input pInputText id="code" style="width:220px; margin: auto auto auto 3px;" placeholder=" Farm Code" type="text" formControlName="code" />
-            </div>
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="timezone">Timezone</label>
-                <input pInputText id="timezone" style="width:220px; margin: auto auto auto 8px;" type="text" placeholder=" Farm Timezone" formControlName="timezone" />
-            </div>
-            <div class="field col-12" style="margin-bottom: 16px;">
-                <label htmlFor="address">Address</label>
-                <input pInputTextarea id="address" style="width:455px; margin: auto;" rows="8" placeholder=" Farm Address" formControlName="address" />
-            </div>
-            <div class="field col-12"style="margin-bottom: 16px;">
-                <label htmlFor="logo">Logo</label>
-                <div class="upload-con">
-                <input pInputText type="file" style="width:455px; margin: auto;" id="logo" formControlName="logo" class="custom-upload"  accept="image/*"
-                    (change)="uploadReceiverImage($event)" />
-                    
-                    </div>
-            </div>
-            
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="contactPhone">Contact Number</label>
-                <input pInputText id="contactPhone" style="width:220px; margin: auto;" type="number" placeholder="Contact Number" formControlName="contactPhone" />
-            </div>
+<p-dialog header="Add farm" [(visible)]="visible" [modal]="true" [style]="{ width: '50vw' }">
+  <form [formGroup]="farmForm" (ngSubmit)="onSubmit()">
+    <div class="main-con" style="width: 500px; margin: 24px auto 0px auto">
+      <div class="p-fluid col-12 p-formgrid grid">
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="name">Name</label>
+          <input
+            pInputText
+            id="name"
+            type="text"
+            style="width: 220px; margin: auto"
+            placeholder=" Farm Name"
+            formControlName="name"
+          />
+        </div>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="type">Type</label>
+          <div class="unique-type" style="width: 220px; margin: auto">
+            <p-dropdown
+              [options]="dropdownFarmtype"
+              optionLabel="type"
+              formControlName="type"
+            ></p-dropdown>
+          </div>
+        </div>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="code">Code</label>
+          <input
+            pInputText
+            id="code"
+            style="width: 220px; margin: auto auto auto 3px"
+            placeholder=" Farm Code"
+            type="text"
+            formControlName="code"
+          />
+        </div>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="timezone">Timezone</label>
+          <input
+            pInputText
+            id="timezone"
+            style="width: 220px; margin: auto auto auto 8px"
+            type="text"
+            placeholder=" Farm Timezone"
+            formControlName="timezone"
+          />
+        </div>
+        <div class="field col-12" style="margin-bottom: 16px">
+          <label htmlFor="address">Address</label>
+          <input
+            pInputTextarea
+            id="address"
+            style="width: 455px; margin: auto"
+            rows="8"
+            placeholder=" Farm Address"
+            formControlName="address"
+          />
+        </div>
+        <div class="field col-12" style="margin-bottom: 16px">
+          <label htmlFor="logo">Logo</label>
+          <div class="upload-con">
+            <input
+              pInputText
+              type="file"
+              style="width: 455px; margin: auto"
+              id="logo"
+              formControlName="logo"
+              class="custom-upload"
+              accept="image/*"
+              (change)="uploadReceiverImage($event)"
+            />
+          </div>
+        </div>
 
-            <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                <label htmlFor="contactEmail">Contact Email</label>
-                <input pInputText id="contactEmail" type="email" style="width:220px; margin: auto auto auto 8px;" placeholder="Contact Email"  formControlName="contactEmail" />
-            </div>
-            <div class="sep-line"></div>
-            <button type="submit" class="unique-sub"  pButton label="Submit" [disabled]="!farmForm.valid"></button>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="contactPhone">Contact Number</label>
+          <input
+            pInputText
+            id="contactPhone"
+            style="width: 220px; margin: auto"
+            type="number"
+            placeholder="Contact Number"
+            formControlName="contactPhone"
+          />
         </div>
+
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label htmlFor="contactEmail">Contact Email</label>
+          <input
+            pInputText
+            id="contactEmail"
+            type="email"
+            style="width: 220px; margin: auto auto auto 8px"
+            placeholder="Contact Email"
+            formControlName="contactEmail"
+          />
         </div>
-        
-    </form>
+        <div class="sep-line"></div>
+        <button
+          type="submit"
+          class="unique-sub"
+          pButton
+          label="Submit"
+          [disabled]="!farmForm.valid"
+        ></button>
+      </div>
+    </div>
+  </form>
 </p-dialog>
 <p-toast></p-toast>

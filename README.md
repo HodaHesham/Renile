@@ -1,4 +1,5 @@
-# Renile — THI Programming Submission  
+# Renile — THI Programming Submission
+
 A simple but well-structured Angular web application built to demonstrate my **basic to advanced programming knowledge** for my application to **TH Ingolstadt (THI)**.
 
 This project shows my ability to:  
@@ -6,48 +7,53 @@ This project shows my ability to:
 ✔ Organize components and services  
 ✔ Work with TypeScript  
 ✔ Use modern frontend development tools  
-✔ Document and structure code professionally  
+✔ Document and structure code professionally
 
 ---
 
-## 🚀 Live Demo  
+## 🚀 Live Demo
+
 https://renile.netlify.app/
 
 ---
 
-## 🎯 Project Purpose  
-This project was created specifically for THI to show that I have:  
-- Solid understanding of **web programming fundamentals**  
-- Ability to build, run, and deploy an Angular project  
-- Familiarity with components, routing, services, and application structure  
-- Experience working with Git/GitHub, Node.js, and modern development tools  
+## 🎯 Project Purpose
+
+This project was created specifically for THI to show that I have:
+
+- Solid understanding of **web programming fundamentals**
+- Ability to build, run, and deploy an Angular project
+- Familiarity with components, routing, services, and application structure
+- Experience working with Git/GitHub, Node.js, and modern development tools
 - Motivation to prepare myself for the **UXD Master’s Program** by improving my technical skills
 
 ---
 
-## 🧩 Features  
-- Angular 13 application  
-- Component-based structure  
-- Routing and navigation  
-- Reusable UI elements  
-- Clean folder and code organization  
-- Ready-to-extend architecture  
-- Local development + production build setup  
+## 🧩 Features
+
+- Angular 13 application
+- Component-based structure
+- Routing and navigation
+- Reusable UI elements
+- Clean folder and code organization
+- Ready-to-extend architecture
+- Local development + production build setup
 
 ---
 
-## 🛠 Tech Stack  
-**Frontend:**  
-- Angular 
-- TypeScript  
-- HTML5 / CSS3  
+## 🛠 Tech Stack
 
-**Tools:**  
-- Angular CLI  
-- Node.js  
-- GitHub  
+**Frontend:**
 
+- Angular
+- TypeScript
+- HTML5 / CSS3
 
+**Tools:**
+
+- Angular CLI
+- Node.js
+- GitHub
 
 # Sakai
 

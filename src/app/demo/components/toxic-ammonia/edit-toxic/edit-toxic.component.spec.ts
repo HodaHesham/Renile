@@ -8,10 +8,9 @@ describe('EditToxicComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditToxicComponent]
-    })
-    .compileComponents();
-    
+      imports: [EditToxicComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(EditToxicComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

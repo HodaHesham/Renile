@@ -4,13 +4,12 @@ import { Farm } from 'src/app/demo/api/farm';
 @Component({
   selector: 'app-farm-details',
   templateUrl: './farm-details.component.html',
-  styleUrl: './farm-details.component.scss'
+  styleUrl: './farm-details.component.scss',
 })
-export class FarmDetailsComponent implements OnInit,AfterViewInit{
-  @Input() selectedItem:Farm
+export class FarmDetailsComponent implements OnInit, AfterViewInit {
+  @Input() selectedItem: Farm;
   @Input() farm: Farm[];
-  ngOnInit() {
-  }
+  ngOnInit() {}
   ngAfterViewInit() {
     if (this.selectedItem === undefined || this.selectedItem === null) {
       // Check if farms array is not empty

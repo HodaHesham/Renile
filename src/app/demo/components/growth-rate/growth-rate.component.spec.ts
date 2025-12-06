@@ -8,10 +8,9 @@ describe('GrowthRateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GrowthRateComponent]
-    })
-    .compileComponents();
-    
+      imports: [GrowthRateComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(GrowthRateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

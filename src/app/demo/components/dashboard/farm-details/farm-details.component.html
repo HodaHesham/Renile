@@ -1,28 +1,28 @@
 <div class="card">
-   <div class="farm-details">
-        <div class="farm-details-img">
-            <img src="https://placehold.co/110x110" alt="farm image">
+  <div class="farm-details">
+    <div class="farm-details-img">
+      <img src="https://placehold.co/110x110" alt="farm image" />
+    </div>
+    <p-divider></p-divider>
+    <div class="farm-details-content">
+      <div class="grid">
+        <div class="md:col-6 mb-3">
+          <h5>Full Name</h5>
+          <p>{{ selectedItem?.type }}</p>
         </div>
-        <p-divider></p-divider>
-        <div class="farm-details-content">
-            <div class="grid">
-                <div class="md:col-6 mb-3"> 
-                    <h5>Full Name</h5>
-                    <p>{{selectedItem?.type}}</p>
-                </div>
-                <div class="md:col-6 mb-3">
-                    <h5>Farm Name</h5>
-                    <p>{{selectedItem?.name}}</p>
-                </div>
-                <div class="md:col-6 mb-3">
-                    <h5>Phone Number</h5>
-                    <p>{{selectedItem?.contactPhone}}</p>
-                </div>
-                <div class="md:col-6 mb-3">
-                    <h5>Email Address</h5>
-                    <p>{{selectedItem?.contactEmail}}</p>
-                </div>
-            </div>
+        <div class="md:col-6 mb-3">
+          <h5>Farm Name</h5>
+          <p>{{ selectedItem?.name }}</p>
         </div>
-   </div>
+        <div class="md:col-6 mb-3">
+          <h5>Phone Number</h5>
+          <p>{{ selectedItem?.contactPhone }}</p>
+        </div>
+        <div class="md:col-6 mb-3">
+          <h5>Email Address</h5>
+          <p>{{ selectedItem?.contactEmail }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

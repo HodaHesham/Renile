@@ -1,23 +1,23 @@
 .card {
-    background: var(--surface-card);
-    border: 1px solid var(--surface-border);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: var(--card-shadow);
-    border-radius: $borderRadius;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  border-radius: $borderRadius;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-    button.p-element.p-button-rounded.p-button-success.p-button.p-component.p-button-icon-only {
-        background-color: var(--primary-color);
-}
+  &:last-child {
+    margin-bottom: 0;
+  }
+  button.p-element.p-button-rounded.p-button-success.p-button.p-component.p-button-icon-only {
+    background-color: var(--primary-color);
+  }
 }
 
 .p-toast {
-    &.p-toast-top-right,
-    &.p-toast-top-left,
-    &.p-toast-top-center {
-        top: 100px;
-    }
+  &.p-toast-top-right,
+  &.p-toast-top-left,
+  &.p-toast-top-center {
+    top: 100px;
+  }
 }

@@ -3,9 +3,7 @@ import { RouterModule } from '@angular/router';
 import { FeedRateComponent } from './feed-rate.component';
 
 @NgModule({
-  imports: [RouterModule.forChild([
-    { path: '', component: FeedRateComponent },
-  ])],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild([{ path: '', component: FeedRateComponent }])],
+  exports: [RouterModule],
 })
-export class FeedRateRoutingModule { }
+export class FeedRateRoutingModule {}

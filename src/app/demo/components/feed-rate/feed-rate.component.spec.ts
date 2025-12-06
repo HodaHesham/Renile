@@ -8,10 +8,9 @@ describe('FeedRateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FeedRateComponent]
-    })
-    .compileComponents();
-    
+      imports: [FeedRateComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(FeedRateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

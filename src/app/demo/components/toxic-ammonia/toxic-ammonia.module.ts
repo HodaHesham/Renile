@@ -22,7 +22,7 @@ import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { EditToxicComponent } from './edit-toxic/edit-toxic.component';
 @NgModule({
-  declarations: [ToxicAmmoniaComponent,EditToxicComponent],
+  declarations: [ToxicAmmoniaComponent, EditToxicComponent],
   imports: [
     CommonModule,
     ToxicAmmoniaRoutingModule,
@@ -45,6 +45,6 @@ import { EditToxicComponent } from './edit-toxic/edit-toxic.component';
     CalendarModule,
     DialogModule,
   ],
-  providers: [MessageService]
+  providers: [MessageService],
 })
-export class ToxicAmmoniaModule { }
+export class ToxicAmmoniaModule {}

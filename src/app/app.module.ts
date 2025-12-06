@@ -14,19 +14,19 @@ import { PhotoService } from './demo/service/photo.service';
 import { FarmsService } from './demo/service/farms.service';
 
 @NgModule({
-    declarations: [AppComponent, NotfoundComponent],
-    imports: [AppRoutingModule, AppLayoutModule],
-    providers: [
-        { provide: LocationStrategy, useClass: PathLocationStrategy },
-        CountryService,
-        CustomerService,
-        EventService,
-        IconService,
-        NodeService,
-        PhotoService,
-        ProductService,
-        FarmsService
-    ],
-    bootstrap: [AppComponent],
+  declarations: [AppComponent, NotfoundComponent],
+  imports: [AppRoutingModule, AppLayoutModule],
+  providers: [
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+    CountryService,
+    CustomerService,
+    EventService,
+    IconService,
+    NodeService,
+    PhotoService,
+    ProductService,
+    FarmsService,
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

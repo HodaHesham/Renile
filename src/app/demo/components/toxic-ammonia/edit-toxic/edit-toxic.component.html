@@ -1,43 +1,75 @@
-<p-dialog [(visible)]="showEditToxic" [style]="{width: '579px'}" header="ForeCast" [modal]="true" class="p-fluid">
-    <form [formGroup]="editToxicForm"  (ngSubmit)="onSubmit()">
-        <div class="main-con" style="width:500px; margin:24px auto 0px auto;">
-            <div class="p-fluid col-12 p-formgrid grid">
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="Do">Do</label>
-                        <input type="text" pInputText id="Do" style="width:220px; margin: auto;" required autofocus formControlName="do" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                    </div>
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="Ph">Ph</label>
-                        <input type="text" pInputText id="Ph" style="width:220px; margin: auto auto auto 8px;" required autofocus formControlName="ph" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                    </div>
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="tempreature">Tempreature</label>
-                        <input type="text" pInputText id="tempreature" style="width:220px; margin: auto;" required autofocus formControlName="temp" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+<p-dialog
+  [(visible)]="showEditToxic"
+  [style]="{ width: '579px' }"
+  header="ForeCast"
+  [modal]="true"
+  class="p-fluid"
+>
+  <form [formGroup]="editToxicForm" (ngSubmit)="onSubmit()">
+    <div class="main-con" style="width: 500px; margin: 24px auto 0px auto">
+      <div class="p-fluid col-12 p-formgrid grid">
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label for="Do">Do</label>
+          <input
+            type="text"
+            pInputText
+            id="Do"
+            style="width: 220px; margin: auto"
+            required
+            autofocus
+            formControlName="do"
+          />
+          <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+        </div>
 
-                </div>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label for="Ph">Ph</label>
+          <input
+            type="text"
+            pInputText
+            id="Ph"
+            style="width: 220px; margin: auto auto auto 8px"
+            required
+            autofocus
+            formControlName="ph"
+          />
+          <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+        </div>
 
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="date">Date</label>
-                        <div class="unique-type" style="width:220px; margin: auto auto auto 8px;">
-                        <p-calendar [showIcon]="true" inputId="date"  formControlName="date"></p-calendar>
-                        <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label for="tempreature">Tempreature</label>
+          <input
+            type="text"
+            pInputText
+            id="tempreature"
+            style="width: 220px; margin: auto"
+            required
+            autofocus
+            formControlName="temp"
+          />
+          <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+        </div>
+
+        <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+          <label for="date">Date</label>
+          <div class="unique-type" style="width: 220px; margin: auto auto auto 8px">
+            <p-calendar [showIcon]="true" inputId="date" formControlName="date"></p-calendar>
+            <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
                             <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                            </div>
-                    </div>
-                    <div class="sep-line"></div>
-                    <div class="flex align-items-center justify-content-center media-size" style="margin: auto;">
-                <button pButton pRipple label="test" type="submit" class="p-button-doubled"></button>
-                <button pButton pRipple label="Cancel" class=" p-button-rounded p-button-danger-doubled "
-                    (click)="hideDialog()"></button>
-            </div>
-
-            </div>
-            </div>
-    </form>
+          </div>
+        </div>
+        <div class="sep-line"></div>
+        <div class="flex align-items-center justify-content-center media-size" style="margin: auto">
+          <button pButton pRipple label="test" type="submit" class="p-button-doubled"></button>
+          <button
+            pButton
+            pRipple
+            label="Cancel"
+            class="p-button-rounded p-button-danger-doubled"
+            (click)="hideDialog()"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </form>
 </p-dialog>

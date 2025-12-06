@@ -20,8 +20,6 @@ import { MenuModule } from 'primeng/menu';
 import { FormsModule } from '@angular/forms';
 import { DividerModule } from 'primeng/divider';
 
-
-
 @NgModule({
   imports: [
     CommonModule,
@@ -46,4 +44,4 @@ import { DividerModule } from 'primeng/divider';
   ],
   declarations: [DeathRateComponent],
 })
-export class DeathRateModule { }
+export class DeathRateModule {}

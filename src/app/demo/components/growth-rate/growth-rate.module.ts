@@ -21,8 +21,6 @@ import { FormsModule } from '@angular/forms';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 
-
-
 @NgModule({
   declarations: [GrowthRateComponent],
   imports: [
@@ -46,6 +44,6 @@ import { MessageService } from 'primeng/api';
     CalendarModule,
     DialogModule,
   ],
-  providers:[MessageService ]
+  providers: [MessageService],
 })
-export class GrowthRateModule { }
+export class GrowthRateModule {}

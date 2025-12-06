@@ -8,10 +8,9 @@ describe('ToxicAmmoniaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToxicAmmoniaComponent]
-    })
-    .compileComponents();
-    
+      imports: [ToxicAmmoniaComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ToxicAmmoniaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

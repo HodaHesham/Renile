@@ -6,37 +6,37 @@ import { MockApiService } from './mock-api.service';
 
 @Injectable()
 export class FarmsService {
-    url: string = 'http://143.110.233.153:80/api/farms'
-    constructor(
-        private http: HttpClient,
-        private mockApiService: MockApiService
-    ) { }
-    
-    getFarms(): Observable<any> {
-        if (this.mockApiService.isMockMode()) {
-            return this.mockApiService.getFarms();
-        }
-        return this.http.get<any>(this.url);
+  url: string = 'http://143.110.233.153:80/api/farms';
+  constructor(
+    private http: HttpClient,
+    private mockApiService: MockApiService,
+  ) {}
+
+  getFarms(): Observable<any> {
+    if (this.mockApiService.isMockMode()) {
+      return this.mockApiService.getFarms();
     }
-    
-    createFarm(formData: any): Observable<any> {
-        if (this.mockApiService.isMockMode()) {
-            return this.mockApiService.createFarm(formData);
-        }
-        return this.http.post<any>(this.url, formData);
+    return this.http.get<any>(this.url);
+  }
+
+  createFarm(formData: any): Observable<any> {
+    if (this.mockApiService.isMockMode()) {
+      return this.mockApiService.createFarm(formData);
     }
-    
-    editFarm(formData: any, id: any): Observable<any> {
-        if (this.mockApiService.isMockMode()) {
-            return this.mockApiService.editFarm(formData, id);
-        }
-        return this.http.patch(this.url + "/" + `${id}`, formData);
+    return this.http.post<any>(this.url, formData);
+  }
+
+  editFarm(formData: any, id: any): Observable<any> {
+    if (this.mockApiService.isMockMode()) {
+      return this.mockApiService.editFarm(formData, id);
     }
-    
-    deleteFarm(id: any): Observable<any> {
-        if (this.mockApiService.isMockMode()) {
-            return this.mockApiService.deleteFarm(id);
-        }
-        return this.http.delete(this.url + "/" + `${id}`);
+    return this.http.patch(this.url + '/' + `${id}`, formData);
+  }
+
+  deleteFarm(id: any): Observable<any> {
+    if (this.mockApiService.isMockMode()) {
+      return this.mockApiService.deleteFarm(id);
     }
+    return this.http.delete(this.url + '/' + `${id}`);
+  }
 }

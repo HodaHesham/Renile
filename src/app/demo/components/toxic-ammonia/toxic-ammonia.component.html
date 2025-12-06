@@ -1,147 +1,229 @@
 <div class="grid">
-    <div class="col-12 col-12 mt-3">
-        <p-toolbar styleClass="mb-4">
-            <ng-template pTemplate="left">
-                <div class="my-2">
-                    <form class="flex md:align-items-center" [formGroup]="dateRangeForm" (ngSubmit)="selectDateRange()">
-                        <p-calendar formControlName="rangeDates" (onChange)="detectChanges($event)"
-                            placeholder="Please Select Range Date"  selectionMode="range" class="custom-search p-button-primary mr-2"
-                            [readonlyInput]="true"></p-calendar>
-                        <button pButton pRipple type="submit" icon="pi pi-search"
-                            class="p-button-primary mr-2"></button>
-                    </form>
-                </div>
-            </ng-template>
+  <div class="col-12 col-12 mt-3">
+    <p-toolbar styleClass="mb-4">
+      <ng-template pTemplate="left">
+        <div class="my-2">
+          <form
+            class="flex md:align-items-center"
+            [formGroup]="dateRangeForm"
+            (ngSubmit)="selectDateRange()"
+          >
+            <p-calendar
+              formControlName="rangeDates"
+              (onChange)="detectChanges($event)"
+              placeholder="Please Select Range Date"
+              selectionMode="range"
+              class="custom-search p-button-primary mr-2"
+              [readonlyInput]="true"
+            ></p-calendar>
+            <button
+              pButton
+              pRipple
+              type="submit"
+              icon="pi pi-search"
+              class="p-button-primary mr-2"
+            ></button>
+          </form>
+        </div>
+      </ng-template>
 
-            <ng-template pTemplate="right">
-                <button pButton pRipple label="Forecast" icon="pi pi-upload" class="p-button-primary  mr-2"
-                    (click)="openNew()"></button>
-            </ng-template>
-        </p-toolbar>
-    </div>
-    <p-dialog [(visible)]="foreCastDialog" [style]="{width: '50vw'}" header="ForeCast" [modal]="true" class="p-fluid">
-        <form [formGroup]="toxicForm" (ngSubmit)="saveCast()">
-            <div class="main-con" style="width:500px; margin:24px auto 24px auto;">
-            <div class="p-fluid col-12 p-formgrid grid">
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="Do">Do</label>
-                        <input type="text" pInputText id="Do" style="width:220px; margin: auto;" required autofocus formControlName="do" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                    </div>
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="Ph">Ph</label>
-                        <input type="text" pInputText id="Ph" style="width:220px; margin: auto auto auto 8px;" required autofocus formControlName="ph" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                    </div>
-                
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="tempreature">Tempreature</label>
-                        <input type="text" pInputText id="tempreature" style="width:220px; margin: auto;" required autofocus formControlName="temp" />
-                        <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+      <ng-template pTemplate="right">
+        <button
+          pButton
+          pRipple
+          label="Forecast"
+          icon="pi pi-upload"
+          class="p-button-primary mr-2"
+          (click)="openNew()"
+        ></button>
+      </ng-template>
+    </p-toolbar>
+  </div>
+  <p-dialog
+    [(visible)]="foreCastDialog"
+    [style]="{ width: '50vw' }"
+    header="ForeCast"
+    [modal]="true"
+    class="p-fluid"
+  >
+    <form [formGroup]="toxicForm" (ngSubmit)="saveCast()">
+      <div class="main-con" style="width: 500px; margin: 24px auto 24px auto">
+        <div class="p-fluid col-12 p-formgrid grid">
+          <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+            <label for="Do">Do</label>
+            <input
+              type="text"
+              pInputText
+              id="Do"
+              style="width: 220px; margin: auto"
+              required
+              autofocus
+              formControlName="do"
+            />
+            <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+          </div>
 
-                </div>
+          <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+            <label for="Ph">Ph</label>
+            <input
+              type="text"
+              pInputText
+              id="Ph"
+              style="width: 220px; margin: auto auto auto 8px"
+              required
+              autofocus
+              formControlName="ph"
+            />
+            <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+          </div>
 
-                    <div class="field col-12 md:col-6" style="margin-bottom: 16px;">
-                        <label for="date">Date</label>
-                        <div class="unique-type" style="width:220px; margin: auto auto auto 8px;">
-                        <p-calendar [showIcon]="true" inputId="date"  formControlName="date"></p-calendar>
-                        <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
+          <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+            <label for="tempreature">Tempreature</label>
+            <input
+              type="text"
+              pInputText
+              id="tempreature"
+              style="width: 220px; margin: auto"
+              required
+              autofocus
+              formControlName="temp"
+            />
+            <!-- <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
+          </div>
+
+          <div class="field col-12 md:col-6" style="margin-bottom: 16px">
+            <label for="date">Date</label>
+            <div class="unique-type" style="width: 220px; margin: auto auto auto 8px">
+              <p-calendar [showIcon]="true" inputId="date" formControlName="date"></p-calendar>
+              <!-- <input type="text" pInputText id="Toxic"  required autofocus/>
                             <small class="ng-dirty ng-invalid" *ngIf="submitted && !product.name">Name is required.</small> -->
-                            </div>
-                    </div>
-                    <div class="sep-line"></div>
-                    <div class="flex align-items-center justify-content-center media-size" style="margin: auto;">
-                <button pButton pRipple label="test" type="submit" class="p-button-doubled"></button>
-                <button pButton pRipple label="Cancel" class=" p-button-rounded p-button-danger-doubled "
-                    (click)="hideDialog()"></button>
             </div>
-
-            </div>
-
-            
-            </div>
-        </form>
-    </p-dialog>
-    <div class="col-12">
-        <div class="card">
-            <h5>Toxic ammonia</h5>
-            <p-chart type="line" [data]="chartData" [options]="chartOptions"></p-chart>
+          </div>
+          <div class="sep-line"></div>
+          <div
+            class="flex align-items-center justify-content-center media-size"
+            style="margin: auto"
+          >
+            <button pButton pRipple label="test" type="submit" class="p-button-doubled"></button>
+            <button
+              pButton
+              pRipple
+              label="Cancel"
+              class="p-button-rounded p-button-danger-doubled"
+              (click)="hideDialog()"
+            ></button>
+          </div>
         </div>
+      </div>
+    </form>
+  </p-dialog>
+  <div class="col-12">
+    <div class="card">
+      <h5>Toxic ammonia</h5>
+      <p-chart type="line" [data]="chartData" [options]="chartOptions"></p-chart>
     </div>
-    <div class="col-12">
-        <div class="card px-6  py-6">
-            <p-toast></p-toast>
-            <p-table #dt [value]="toxic" [columns]="toxicCols" responsiveLayout="scroll" [rows]="10"
-                [globalFilterFields]="['name','type','id']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]"
-                [showCurrentPageReport]="true"
-                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowHover]="true"
-                dataKey="id">
-                <ng-template pTemplate="caption">
-                    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-                        <!-- <h5 class="m-0">Manage Products</h5> -->
-                        <span class="block mt-2 md:mt-0 p-input-icon-left">
-                            <i class="pi pi-search"></i>
-                            <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Search..."
-                                class="w-full sm:w-auto" />
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template pTemplate="header">
-                    <tr>
-                        <th style="width: 3rem">
-                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                        </th>
-                        <ng-container *ngFor="let col of toxicCols">
-                            <th pSortableColumn="{{col.field}}">{{col.header}}
-                                <p-sortIcon field="{{col.field}}"></p-sortIcon>
-                            </th>
-                        </ng-container>
-                        <th>Actions</th>
-                    </tr>
-                </ng-template>
-                <ng-template pTemplate="body" let-item let-i="index">
-                    <tr>
-                        <td>
-                            <p-tableCheckbox [value]="item"></p-tableCheckbox>
-                        </td>
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">date</span>
-                            {{item.date}}
-                        </td>
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">ph</span>
-                            {{item.ph}}
-                        </td>
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">do</span>
-                            {{item.do}}
-                        </td>
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">temp</span>
-                            {{item.temp}}
-                        </td>
+  </div>
+  <div class="col-12">
+    <div class="card px-6 py-6">
+      <p-toast></p-toast>
+      <p-table
+        #dt
+        [value]="toxic"
+        [columns]="toxicCols"
+        responsiveLayout="scroll"
+        [rows]="10"
+        [globalFilterFields]="['name', 'type', 'id']"
+        [paginator]="true"
+        [rowsPerPageOptions]="[10, 20, 30]"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowHover]="true"
+        dataKey="id"
+      >
+        <ng-template pTemplate="caption">
+          <div
+            class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+          >
+            <!-- <h5 class="m-0">Manage Products</h5> -->
+            <span class="block mt-2 md:mt-0 p-input-icon-left">
+              <i class="pi pi-search"></i>
+              <input
+                pInputText
+                type="text"
+                (input)="onGlobalFilter(dt, $event)"
+                placeholder="Search..."
+                class="w-full sm:w-auto"
+              />
+            </span>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 3rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <ng-container *ngFor="let col of toxicCols">
+              <th pSortableColumn="{{ col.field }}">
+                {{ col.header }}
+                <p-sortIcon field="{{ col.field }}"></p-sortIcon>
+              </th>
+            </ng-container>
+            <th>Actions</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item let-i="index">
+          <tr>
+            <td>
+              <p-tableCheckbox [value]="item"></p-tableCheckbox>
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">date</span>
+              {{ item.date }}
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">ph</span>
+              {{ item.ph }}
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">do</span>
+              {{ item.do }}
+            </td>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">temp</span>
+              {{ item.temp }}
+            </td>
 
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">result</span>
-                            {{item.result}}
-                        </td>
-                        <td>
-                            <div class="flex">
-                                <button pButton pRipple icon="pi pi-pencil"
-                                    class="p-button-rounded p-button-success mr-2" (click)="editItem(item)">
-                                </button>
-                                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger"
-                                    (click)="deleteItem(item.id)">
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
-                </ng-template>
-            </p-table>
-        </div>
+            <td style="width: 14%; min-width: 10rem">
+              <span class="p-column-title">result</span>
+              {{ item.result }}
+            </td>
+            <td>
+              <div class="flex">
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-pencil"
+                  class="p-button-rounded p-button-success mr-2"
+                  (click)="editItem(item)"
+                ></button>
+                <button
+                  pButton
+                  pRipple
+                  icon="pi pi-trash"
+                  class="p-button-rounded p-button-danger"
+                  (click)="deleteItem(item.id)"
+                ></button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
     </div>
+  </div>
 </div>
-<app-edit-toxic *ngIf="showEditToxic" (formSubmitted)="formSubmitted($event)" [currentToxic]="currentToxic"
-    [showEditToxic]="showEditToxic"></app-edit-toxic>
+<app-edit-toxic
+  *ngIf="showEditToxic"
+  (formSubmitted)="formSubmitted($event)"
+  [currentToxic]="currentToxic"
+  [showEditToxic]="showEditToxic"
+></app-edit-toxic>
