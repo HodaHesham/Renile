@@ -1,3 +1,54 @@
+# Renile — THI Programming Submission  
+A simple but well-structured Angular web application built to demonstrate my **basic to advanced programming knowledge** for my application to **TH Ingolstadt (THI)**.
+
+This project shows my ability to:  
+✔ Build with Angular  
+✔ Organize components and services  
+✔ Work with TypeScript  
+✔ Use modern frontend development tools  
+✔ Document and structure code professionally  
+
+---
+
+## 🚀 Live Demo  
+https://renile.netlify.app/
+
+---
+
+## 🎯 Project Purpose  
+This project was created specifically for THI to show that I have:  
+- Solid understanding of **web programming fundamentals**  
+- Ability to build, run, and deploy an Angular project  
+- Familiarity with components, routing, services, and application structure  
+- Experience working with Git/GitHub, Node.js, and modern development tools  
+- Motivation to prepare myself for the **UXD Master’s Program** by improving my technical skills
+
+---
+
+## 🧩 Features  
+- Angular 13 application  
+- Component-based structure  
+- Routing and navigation  
+- Reusable UI elements  
+- Clean folder and code organization  
+- Ready-to-extend architecture  
+- Local development + production build setup  
+
+---
+
+## 🛠 Tech Stack  
+**Frontend:**  
+- Angular 
+- TypeScript  
+- HTML5 / CSS3  
+
+**Tools:**  
+- Angular CLI  
+- Node.js  
+- GitHub  
+
+
+
 # Sakai
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
