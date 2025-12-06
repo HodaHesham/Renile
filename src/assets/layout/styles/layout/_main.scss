@@ -22,14 +22,21 @@ body {
     margin-bottom: 0px!important;
  }
  .grid{
-  margin-top: 0rem!important;
+  //margin-top: 0rem!important;
  }
  .custom-search{
   width: 370px!important;
+    @media (max-width: 768px){
+    width: 174px!important;
+  }
   
   .p-inputtext.p-component{
      width: 370px!important;
+     @media (max-width: 768px){
+    width: 174px!important;
   }
+  }
+  
  }
  .col-12 {
   padding: 0px!important;

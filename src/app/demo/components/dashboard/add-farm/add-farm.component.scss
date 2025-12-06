@@ -19,6 +19,12 @@
             border-radius: 5px;
             padding: 24px;
             margin-bottom: 20px;
+            display: flex;
+            
+            @media (max-width: 768px){
+            align-items: center;
+            justify-content: center;
+            }
             cursor: pointer;
             display: flex;
             &:last-child {
@@ -32,6 +38,10 @@
                     font-weight: bold;
                 }
             }
+            
+        }
+        @media (max-width: 480px){
+          max-height: 380px;  
         }
     }
 }

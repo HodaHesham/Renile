@@ -102,7 +102,7 @@ getData(): Observable<any> {
 {
     "createdAt": "2024-01-15T10:00:00Z",
     "id": "farm-001",
-    "name": "AquaTech Farm",
+    "name": "AquaTech",
     "type": "Intensive Fish Farming",
     "nPonds": 12,
     "nFishPerPond": 5000,
